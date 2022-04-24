@@ -1,0 +1,49 @@
+{% extends 'student/studentbase.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+
+</head>
+<div class="container my-4">
+    <div class="jumbotron">
+
+	      <h3 class="text-center">Before you start the Exam, here are the rules</h3>
+
+        <div class="row">
+
+            <div class="card border-info mx-4 my-4">
+                <div class="card-body">
+
+                    <h4 class="card-title">Exam Details :</h4>
+                    <p class="card-text">
+                        </p><ul style="list-style:decimal;">
+                            <li>Exam Name : {{course.course_name}}</li>
+                            <li>Total Question : {{total_questions}}</li>
+                            <li>Total Marks : {{total_marks}}</li>
+                        </ul>
+                    <p></p>
+
+
+
+                    <h4 class="card-title">Rules :</h4>
+                    <p class="card-text">
+                        </p><ul style="list-style:decimal;">
+                            <li>All questions are multiple choice question.</li>
+                            <li><span class="text-danger">Only one choice is correct.</span></li>
+                            <li>You will be told your marks immediately when you submit the answer.</li>
+                        </ul>
+                    <p></p>
+                    <a href="{% url 'start-exam' course.id  %}" class="btn btn-outline-info">Let's Start</a>
+                </div>  
+                <div class="card-footer">Best Of Luck</div>  
+            </div>  
+        </div>  
+
+    </div>
+</div>
+{% endblock content %}

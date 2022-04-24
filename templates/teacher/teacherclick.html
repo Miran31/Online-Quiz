@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Teacher</title>
+
+</head>
+
+<body>
+
+  {% include "quiz/navbar.html" %}
+  <br><br>
+  <div class="container" style="text-align:center; margin-top:120px">
+    <div class="justify-content-center">
+      <h1 class="display-4">Hello, Teacher</h1>
+      <p class="lead">Welcome to Online Quiz</p>
+      <p class="lead">You can create exam and add questions after Login.If you dont have an account create form here.</p>
+      <div class="inline-block">
+        <a class="btn btn-outline-info btn-lg" href="teachersignup" role="button"><i class="fas fa-user-plus" style="margin-right:5px"></i>Create Your Account</a>
+        <a class="btn btn-outline-info btn-lg" href="teacherlogin" role="button"><i class="fas fa-sign-in-alt" style="margin-right:5px"></i>Login</a>
+      </div>
+    <br><br><br><br>
+    </div>
+  </div>
+</body>
+
+</html>

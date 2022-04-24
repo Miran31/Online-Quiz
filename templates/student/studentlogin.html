@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Student Login</title>
+    <style media="screen">
+        body{
+            background: linear-gradient( to right,#b92b27, #1565c0);
+          }
+          .group span{
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            margin-left: -2px;
+          }
+          .form-group{
+            margin-bottom: 25px;
+            height: 40px;
+          }
+          .form-group input{
+            padding-left: 50px;
+            border-radius: 8px;
+            height: 40px;
+          }
+          .acus{
+            text-decoration: none;
+          }
+          .acus:hover{
+            text-decoration: none;
+          }
+          .martop{
+              margin-top:20px;
+          }
+    </style>
+  </head>
+  <body>
+    {% include "quiz/navbar.html" %}
+
+
+    <br><br><br><br><br><br>
+    <div class="container">
+        <div class="row justify-content-center"style="position:relative">
+            <div class="col-sm-4">
+                <div class="card border-dark">
+                    <div class="card-header bg-dark text-white" style="text-align:center">
+                        <span style="font-family:arial;font-size:20px">Student Login</span>
+                    </div>
+                    <div class="card-body">
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="form-group martop">
+                                <div class="group">
+                                    <span class="input-group-text"><i class="fas fa-user"></i><span>
+                                </div> 
+                                {% render_field form.username class="form-control" placeholder="Username" %}
+                            </div>
+                            <div class="form-group">
+                                <div class="group">
+                                    <span class="input-group-text"><i class="fas fa-lock"></i><span>
+                                </div>
+                                {% render_field form.password class="form-control" placeholder="Password" %}
+                            </div>
+                            <button type="submit" class="btn btn-outline-info martop"style="width:100%">Login</button>
+                        </form>
+                        <p>Don't have an account? <a href="studentsignup" class="acus" >Register Here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

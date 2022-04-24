@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+
+
+  <style media="screen">
+    .alert {
+      margin: 0px;
+    }
+  </style>
+  <body>
+    {% include "quiz/navbar.html" %}
+
+      <div class="container"style="margin-top:130px; text-align:center">
+        <h1 class="display-4">Hello {{request.user.first_name}}</h1>
+        <p class="lead">Your Account is not approved <br><br>Please wait for approval<br> Logout for now</p>
+        <a class="btn btn-outline-info btn-lg" href="/logout" role="button"><i class="fas fa-sign-out-alt" style="margin-right:5px;"></i>Logout</a>
+      </div>
+  </body>
+</html>
